@@ -16,7 +16,7 @@
             <clobbers target="cordova.plugins.deviceName" />
         </js-module>
         <config-file target='AndroidManifest.xml' parent='/manifest'>
-            <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="18" />
+            <uses-permission android:name="android.permission.BLUETOOTH" />
         </config-file>
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="DeviceName" >
@@ -24,7 +24,6 @@
             </feature>
         </config-file>
         <source-file src="src/android/net/becvert/cordova/DeviceName.java" target-dir="src/net/becvert/cordova" />
-        <hook type="after_prepare" src="merge-bluetooth-permission.js" />
     </platform>
 
     <!-- ios -->
